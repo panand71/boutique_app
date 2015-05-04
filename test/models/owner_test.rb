@@ -10,6 +10,10 @@ class OwnerTest < ActiveSupport::TestCase
                        password: "foobars", password_confirmation: "foobars")
   end
 
+  test "authenticated? should return false for a owner with nil digest" do
+    assert_not @owner.authenticated?('')
+  end
+
   test "should be valid" do
     assert @owner.valid?
   end

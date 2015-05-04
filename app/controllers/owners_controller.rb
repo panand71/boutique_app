@@ -10,6 +10,7 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(owner_params)
     if @owner.save
+      log_in @owner
       flash[:success] = "Welcome to Fashion Truck US!"
       redirect_to @owner
     else
