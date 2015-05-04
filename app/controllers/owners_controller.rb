@@ -5,7 +5,6 @@ class OwnersController < ApplicationController
 
   def show
     @owner = Owner.find(params[:id])
-    debugger
   end
 
   def create
