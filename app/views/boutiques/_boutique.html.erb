@@ -1,0 +1,8 @@
+<li id="boutique-<%= boutique.id %>">
+  <%= link_to gravatar_for(boutique.owner, size: 50), boutique.owner %>
+  <span class="owner"><%= link_to boutique.owner.name, boutique.owner %></span>
+  <span class="name"><%= boutique.name %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(boutique.created_at) %> ago.
+  </span>
+</li>

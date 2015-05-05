@@ -1,4 +1,5 @@
 class Owner < ActiveRecord::Base
+    has_many :boutiques, dependent: :destroy
 
   attr_accessor :remember_token
 
@@ -10,7 +11,7 @@ class Owner < ActiveRecord::Base
   uniqueness: { case_sensitive: false }
 
   has_secure_password
-  validates :password, length: { minimum: 7 }
+  validates :password, length: { minimum: 7 }, allow_blank: true
 
     # Returns the hash digest of the given string.
   def Owner.digest(string)

@@ -1,0 +1,4 @@
+<%= link_to gravatar_for(current_owner, size: 50), current_owner %>
+<h1><%= current_owner.name %></h1>
+<span><%= link_to "view my profile", current_owner %></span>
+<span><%= pluralize(current_owner.boutiques.count, "boutique") %></span>

@@ -3,3 +3,25 @@ premila:
   name: Premila Example
   email: premila@example.com
   password_digest: <%= Owner.digest('password') %>
+
+suj:
+  name: Suj Example
+  email: suj@example.com
+  password_digest: <%= Owner.digest('password') %>
+
+lana:
+  name: Lana Kane
+  email: hands@example.gov
+  password_digest: <%= Owner.digest('password') %>
+
+mallory:
+  name: Mallory Archer
+  email: boss@example.gov
+  password_digest: <%= Owner.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "Owner #{n}" %>
+  email: <%= "owner-#{n}@example.com" %>
+  password_digest: <%= Owner.digest('password') %>
+<% end %>

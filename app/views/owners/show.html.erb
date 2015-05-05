@@ -8,4 +8,13 @@
       </h1>
     </section>
   </aside>
+    <div class="col-md-8">
+    <% if @owner.boutiques.any? %>
+      <h3>Boutiques (<%= @owner.boutiques.count %>)</h3>
+      <ol class="boutiques">
+        <%= render @boutiques %>
+      </ol>
+      # <%= will_paginate @boutiques %>
+    <% end %>
+  </div>
 </div>

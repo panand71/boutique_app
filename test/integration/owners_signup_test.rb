@@ -15,7 +15,7 @@ class OwnersSignupTest < ActionDispatch::IntegrationTest
   test "valid signup information" do
     get signup_path
     assert_difference 'Owner.count', 1 do
-      post_via_redirect owner_path, owner: { name:  "Example Owner",
+      post_via_redirect owners_path, owner: { name:  "Example Owner",
                                             email: "owner@example.com",
                                             password:              "password",
                                             password_confirmation: "password" }

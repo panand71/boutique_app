@@ -1,3 +1,16 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="owner_info">
+        <%= render 'shared/owner_info' %>
+      </section>
+      <section class="boutique_form">
+        <%= render 'shared/boutique_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
+
 <div class="center jumbotron">
   <h1>Welcome to Fashion Truck US</h1>
 
@@ -10,3 +23,4 @@
 
 </div>
 
+<% end %>

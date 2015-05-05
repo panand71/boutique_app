@@ -11,16 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150504215137) do
+ActiveRecord::Schema.define(version: 20150505175412) do
+
+  create_table "boutiques", force: :cascade do |t|
+    t.string   "name"
+    t.string   "website"
+    t.string   "twitter"
+    t.string   "facebook"
+    t.string   "instagram"
+    t.string   "email"
+    t.string   "city"
+    t.string   "state"
+    t.text     "schedule"
+    t.string   "category"
+    t.text     "description"
+    t.integer  "owner_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "boutiques", ["owner_id", "created_at"], name: "index_boutiques_on_owner_id_and_created_at"
+  add_index "boutiques", ["owner_id"], name: "index_boutiques_on_owner_id"
 
   create_table "owners", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "username"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.string   "activation_digest"
+    t.boolean  "activated"
+    t.datetime "activated_at"
+    t.boolean  "admin",             default: false
   end
 
   add_index "owners", ["email"], name: "index_owners_on_email", unique: true
