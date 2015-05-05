@@ -55,7 +55,6 @@ class OwnersController < ApplicationController
                                    :password_confirmation)
     end
 
-
     def correct_owner
       @owner = Owner.find(params[:id])
       # redirect_to(root_url) unless @owner == current_owner

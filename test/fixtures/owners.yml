@@ -3,6 +3,7 @@ premila:
   name: Premila Example
   email: premila@example.com
   password_digest: <%= Owner.digest('password') %>
+  admin: true
 
 suj:
   name: Suj Example
