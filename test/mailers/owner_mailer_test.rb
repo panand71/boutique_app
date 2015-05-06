@@ -14,11 +14,14 @@ class OwnerMailerTest < ActionMailer::TestCase
   end
 
   test "password_reset" do
+    owner = owners(:premila)
+    owner.reset_token = Owner.new_token
     mail = OwnerMailer.password_reset
     assert_equal "Password reset", mail.subject
-    assert_equal ["to@example.org"], mail.to
-    assert_equal ["from@example.com"], mail.from
-    assert_match "Hi", mail.body.encoded
+    assert_equal [owner.email], mail.to
+    assert_equal ["noreply@example.com"], mail.from
+    assert_match owner.reset_token, mail.body.encoded
+    assert_match CGI::escape(owner.email), mail.body.encoded
   end
 
 end

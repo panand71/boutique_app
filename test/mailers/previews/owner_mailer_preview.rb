@@ -11,9 +11,11 @@ class OwnerMailerPreview < ActionMailer::Preview
 
   # Preview this email at http://localhost:3000/rails/mailers/owner_mailer/password_reset
   def password_reset
-    OwnerMailer.password_reset
+    owner = Owner.first
+    owner.reset_token = Owner.new_token
+    OwnerMailer.password_reset(owner)
   end
-
+  
 end
 
 
