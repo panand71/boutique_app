@@ -19,13 +19,17 @@ class OwnersController < ApplicationController
   def create
     @owner = Owner.new(owner_params)
     if @owner.save
-      log_in @owner
-      flash[:success] = "Welcome to Fashion Truck US!"
-      redirect_to @owner
+      @owner.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
+      # log_in @owner
+      # flash[:success] = "Welcome to Fashion Truck US!"
+      # redirect_to @owner
     else
       render 'new'
     end
   end
+
 
   def edit
     @owner = Owner.find(params[:id])

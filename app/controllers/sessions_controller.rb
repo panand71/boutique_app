@@ -5,11 +5,16 @@ class SessionsController < ApplicationController
   def create
     owner = Owner.find_by(email: params[:session][:email].downcase)
     if owner && owner.authenticate(params[:session][:password])
-      log_in owner
-      params[:session][:remember_me] == '1' ? remember(owner) : forget(owner)
-      # redirect_to owner
-      # Log the owner in and redirect to the owner's show page.
-      redirect_back_or owner
+      if owner.activated?
+        log_in owner
+        params[:session][:remember_me] == '1' ? remember(owner) : forget(owner)
+        redirect_back_or owner
+      else
+        message  = "Account not activated. "
+        message += "Check your email for the activation link."
+        flash[:warning] = message
+        redirect_to root_url
+      end
       #redirects to the page they were trying to visit before login
     else
       flash.now[:danger] = 'Invalid email/password combination' # Not quite right!

@@ -10,7 +10,9 @@ Owner.create!(name:  "Example Owner",
              email: "premila@railstutorial.org",
              password:              "foobars",
              password_confirmation: "foobars",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 99.times do |n|
   name  = Faker::Name.name
@@ -19,5 +21,7 @@ Owner.create!(name:  "Example Owner",
   Owner.create!(name:  name,
                email: email,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
 end

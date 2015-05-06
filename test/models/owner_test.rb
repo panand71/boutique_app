@@ -11,7 +11,7 @@ class OwnerTest < ActiveSupport::TestCase
   end
 
   test "authenticated? should return false for a owner with nil digest" do
-    assert_not @owner.authenticated?('')
+    assert_not @owner.authenticated?(:remember, '')
   end
 
   test "should be valid" do
@@ -48,7 +48,7 @@ class OwnerTest < ActiveSupport::TestCase
   end
 
   test "email validation should reject invalid addresses" do 
-    invalid_addresses = %w[user@example,com user_at_foo.org user.name@example.
+    invalid_addresses = %w[owner@example,com owner_at_foo.org owner.name@example.
                            foo@bar_baz.com foo@bar+baz.com]
     invalid_addresses.each do |invalid_address|
       @owner.email = invalid_address
@@ -67,6 +67,8 @@ class OwnerTest < ActiveSupport::TestCase
     @owner.password = @owner.password_confirmation = "a" * 6
     assert_not @owner.valid?
   end
+
+  
 end
 
 

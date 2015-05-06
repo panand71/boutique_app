@@ -15,7 +15,7 @@ module SessionsHelper
       @current_owner || Owner.find_by(id: owner_id)
     elsif (owner_id = cookies.signed[:owner_id])  
       owner = Owner.find_by(id: owner_id)
-      if owner && owner.authenticated?(cookies[:remember_token])
+      if owner && owner.authenticated?(:remember, cookies[:remember_token])
         log_in owner
         @current_owner = owner
       end
