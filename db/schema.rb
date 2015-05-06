@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150505175412) do
+ActiveRecord::Schema.define(version: 20150506032653) do
 
   create_table "boutiques", force: :cascade do |t|
     t.string   "name"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 20150505175412) do
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
     t.boolean  "admin",             default: false
+    t.string   "reset_digest"
+    t.datetime "reset_sent_at"
   end
 
   add_index "owners", ["email"], name: "index_owners_on_email", unique: true
