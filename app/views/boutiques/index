@@ -1,0 +1,60 @@
+
+<h1>Fashion Truck US Mobile Boutique Listing</h1>
+
+# <% form_tag boutiques_path, :method => 'get' do %>
+#   <p>
+#     <%= text_field_tag :search, params[:search] %>
+#     <%= submit_tag "Search", :name => nil %>
+#   </p>
+# <% end %>
+
+<div class="media">
+  <div class="media-body">
+    <table class="table table-hover">
+      <thead>
+        <div class="row"><tr>
+         <div class="col-sm-2" style="background-color:lavender;"><th>Name</th></div>  
+         <div class="col-sm-8" style="background-color:lavenderblush;"><th>Website</th></div>
+        </tr>
+      </thead>
+
+      <tbody>
+        # <% @boutiques.each do |boutique| %>
+        # <tr class="row-links">
+          <td><%= link_to boutique.name, boutique %></td>
+          <td><%= boutique.website %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+// $('.row-links').on('click', 'td:not(.special-td)', function(){
+
+
+//     //get the link from data attribute
+//     var the_link = $(this).parent().attr("data-link");
+
+//     //do we have a valid link      
+//     if (the_link == '' || typeof the_link === 'undefined') {
+//         //do nothing for now
+//     }
+//     else {
+//         //open the page
+//         window.location = the_link;
+//     }
+// });
+// </script>
+
+<br>
+
+<!-- <h3>Import Boutiques</h3>
+<%= form_tag import_boutiques_path, multipart: true do%>
+  <%= file_field_tag :file%>
+  <%= submit_tag "Upload" %>
+<% end %>
+<%= link_to 'New Boutique', new_boutique_path %> -->
+
+
