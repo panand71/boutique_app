@@ -10,6 +10,7 @@ class OwnersController < ApplicationController
  
   def show
     @owner = Owner.find(params[:id])
+    @boutiques = @owner.boutiques.paginate(page: params[:page])
   end
 
   def new

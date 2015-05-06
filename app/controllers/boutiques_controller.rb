@@ -2,7 +2,7 @@ class BoutiquesController < ApplicationController
     before_action :logged_in_owner, only: [:create, :destroy]
 
     def create
-      @boutique = current_owner.boutique.build(boutique_params)
+      @boutique = current_owner.boutiques.build(boutique_params)
       if @boutique.save
         flash[:success] = "Boutique saved!"
         redirect_to root_url

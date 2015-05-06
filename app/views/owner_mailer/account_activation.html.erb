@@ -1,10 +1,12 @@
-<h1>Sample App</h1>
+<h1>Welcome to Fashion Truck US!</h1>
 
 <p>Hi <%= @owner.name %>,</p>
 
 <p>
-Welcome to Fashion Truck US! Click on the link below to activate your account:
+Please click the link below to activate your account:
 </p>
 
 <%= link_to "Activate", edit_account_activation_url(@owner.activation_token,
                                                     email: @owner.email) %>
+
+<p> Users can log in!  Now we need to make it look pretty!</p>
