@@ -68,6 +68,14 @@ class OwnerTest < ActiveSupport::TestCase
     assert_not @owner.valid?
   end
 
+  test "associated boutiques should be destroyed" do
+    @owner.save
+    @owner.boutiques.create!(name: "Lorem ipsum")
+    assert_difference 'Boutique.count', -1 do
+      @owner.destroy
+    end
+  end
+
   
 end
 

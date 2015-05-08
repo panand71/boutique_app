@@ -26,6 +26,12 @@ class BoutiquesController < ApplicationController
     end
   end
 
+  def import
+    Boutique.import(params[:file])
+    redirect_to boutiques_path, notice: "Boutiques uploaded"
+  end
+
+
   private
 
   def boutique_params
