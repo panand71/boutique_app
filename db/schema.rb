@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150506032653) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "boutiques", force: :cascade do |t|
     t.string   "name"
     t.string   "website"
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 20150506032653) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "boutiques", ["owner_id", "created_at"], name: "index_boutiques_on_owner_id_and_created_at"
-  add_index "boutiques", ["owner_id"], name: "index_boutiques_on_owner_id"
+  add_index "boutiques", ["owner_id", "created_at"], name: "index_boutiques_on_owner_id_and_created_at", using: :btree
+  add_index "boutiques", ["owner_id"], name: "index_boutiques_on_owner_id", using: :btree
 
   create_table "owners", force: :cascade do |t|
     t.string   "name"
@@ -49,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150506032653) do
     t.datetime "reset_sent_at"
   end
 
-  add_index "owners", ["email"], name: "index_owners_on_email", unique: true
+  add_index "owners", ["email"], name: "index_owners_on_email", unique: true, using: :btree
 
+  add_foreign_key "boutiques", "owners"
 end

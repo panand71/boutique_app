@@ -1,5 +1,5 @@
-require 'csv'
 class Boutique < ActiveRecord::Base
+  require 'csv'
   belongs_to :owner
   validates :owner_id, presence: true
 

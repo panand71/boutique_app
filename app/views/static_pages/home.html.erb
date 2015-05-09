@@ -11,15 +11,28 @@
   </div>
 <% else %>
 
-<div class="center jumbotron">
-  <h1>Welcome to Fashion Truck US</h1>
-
+<div class="center jumbotron custom_jumbotron">
+  <h1>Help us drive fashion forward</h1>
+</div>
+<div class="row">
+  <div class="col-lg-4">
   <h2>
-    This is the home page for the
-    <a href="#">Fashion Truck US</a>.
+    List your truck
   </h2>
+  <%= link_to "Add your boutique", signup_path, class: "btn btn-sm btn-primary" %>
+</div>
+  <div class="col-lg-4">
+  <h2>
+    Do some shopping
+  </h2>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-sm btn-primary" %>
+</div>
+  <div class="col-lg-4">
+  <h2>
+    Start your own boutique
+  </h2>
+</div>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
 
 </div>
 
