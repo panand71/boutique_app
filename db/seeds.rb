@@ -14,6 +14,15 @@ Owner.create!(name:  "Premila Anand",
              activated: true,
              activated_at: Time.zone.now)
 
+Owner.create!(name:  "Sujit Anand ",
+             email: "sujit1973@gmail.com",
+             password:              "koko2010",
+             password_confirmation: "koko2010",
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+
 
 # 99.times do |n|
 #   name  = Faker::Name.name

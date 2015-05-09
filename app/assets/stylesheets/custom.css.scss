@@ -3,10 +3,14 @@
 
 
 /* universal */
-
+html {
+font-family: 'Lato', sans-serif;
+  
+}
 
 body {
   padding-top: 60px;
+
 }
 
 .custom_jumbotron {
@@ -39,8 +43,9 @@ textarea {
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+ h2, h3, h4, h5, h6 {
   line-height: 1;
+  font-family: 'Lato', sans-serif;
 }
 
 h1 {
@@ -64,6 +69,7 @@ h2 {
 
 p {
   font-size: 1.1em;
+  font-family: 'Lato', sans-serif;
   line-height: 1.7em;
 }
 
@@ -72,13 +78,19 @@ p {
 .navbar-custom {
   background-color: #000033;
   color: #FFFFFF;
+  height: 100px;
 }
 
 .navbar-inverse .navbar-nav > li > a {
   color: #FFFFFF;
+    background-color: #000033;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+
 }
 #logo {
-font-family: 'Oxygen', sans-serif;
+  margin-top: 20px;
+  font-family: 'Oxygen', sans-serif;
   float: left;
   margin-right: 10px;
   font-size: 3em;
@@ -175,8 +187,9 @@ input {
 
 /* footer */
 
+
+
 footer {
-  position: absolute;
   bottom: 0;
   margin-top: 45px;
   padding-top: 5px;

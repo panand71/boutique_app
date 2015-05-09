@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :boutique_searches
   get 'password_resets/new'
 
   get 'password_resets/edit'

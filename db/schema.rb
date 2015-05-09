@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150506032653) do
+ActiveRecord::Schema.define(version: 20150509020200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boutique_searches", force: :cascade do |t|
+    t.string   "keywords"
+    t.integer  "boutique_id"
+    t.string   "boutique_name"
+    t.string   "category"
+    t.string   "city"
+    t.string   "state"
+    t.string   "new"
+    t.string   "show"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "boutiques", force: :cascade do |t|
     t.string   "name"

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Boutique Searches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Keywords</th>
+      <th>Boutique</th>
+      <th>Boutique name</th>
+      <th>Category</th>
+      <th>City</th>
+      <th>State</th>
+      <th>New</th>
+      <th>Show</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boutique_searches.each do |boutique_search| %>
+      <tr>
+        <td><%= boutique_search.keywords %></td>
+        <td><%= boutique_search.boutique_id %></td>
+        <td><%= boutique_search.boutique_name %></td>
+        <td><%= boutique_search.category %></td>
+        <td><%= boutique_search.city %></td>
+        <td><%= boutique_search.state %></td>
+        <td><%= boutique_search.new %></td>
+        <td><%= boutique_search.show %></td>
+        <td><%= link_to 'Show', boutique_search %></td>
+        <td><%= link_to 'Edit', edit_boutique_search_path(boutique_search) %></td>
+        <td><%= link_to 'Destroy', boutique_search, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boutique search', new_boutique_search_path %>

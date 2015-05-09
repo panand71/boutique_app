@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @boutique_search.keywords %>
+</p>
+
+<p>
+  <strong>Boutique:</strong>
+  <%= @boutique_search.boutique_id %>
+</p>
+
+<p>
+  <strong>Boutique name:</strong>
+  <%= @boutique_search.boutique_name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @boutique_search.category %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @boutique_search.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @boutique_search.state %>
+</p>
+
+<p>
+  <strong>New:</strong>
+  <%= @boutique_search.new %>
+</p>
+
+<p>
+  <strong>Show:</strong>
+  <%= @boutique_search.show %>
+</p>
+
+<%= link_to 'Edit', edit_boutique_search_path(@boutique_search) %> |
+<%= link_to 'Back', boutique_searches_path %>
