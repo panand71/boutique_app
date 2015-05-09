@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@-ms-viewport       { width: device-width; }
 
 
 /* universal */
@@ -11,6 +12,10 @@ font-family: 'Lato', sans-serif;
 body {
   padding-top: 60px;
 
+}
+
+.container{
+  margin-top: 50px;
 }
 
 .custom_jumbotron {
@@ -88,8 +93,13 @@ p {
     font-size: 20px;
 
 }
+
+.navbar-brand {
+    max-width: 50%;
+}
+
 #logo {
-  margin-top: 20px;
+
   font-family: 'Oxygen', sans-serif;
   float: left;
   margin-right: 10px;
