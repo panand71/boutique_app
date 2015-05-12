@@ -5,11 +5,7 @@ class BoutiquesController < ApplicationController
 
   
   def index
-    if params[:search]
-      @boutiques = Boutique.search(params[:search]).order(sort_column + " " +sort_direction)
-    else
-      @boutiques = Boutique.order(sort_column + " " +sort_direction)
-    end
+      @boutiques, @alphaParams = Boutique.all.alpha_paginate(params[:letter], {:bootstrap3 => true}) {|boutique| boutique.name}
   end
 
   def show

@@ -2,6 +2,14 @@
 <h1> Boutiques  Directory</h1>
 
 
+<div class="pagination">
+<%= alphabetical_paginate @alphaParams %>
+        <div id="pagination_table">
+        <% @boutiques.each do |boutique| %>
+
+          <% end%>
+        </div>
+
 
 <div class="media">
   <div class="media-body">
@@ -17,13 +25,16 @@
 
 
 
+
       <tbody>
+        
         <% @boutiques.each do |boutique| %>
         <tr class="row-links">
           <td><%= link_to boutique.name, boutique %></td>
           <td><%= boutique.website %></td>
         </tr>
         <% end %>
+      </div>
       </tbody>
     </table>
   </div>
