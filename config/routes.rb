@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'contacts/new'
+
+  get 'contacts/create'
+
   resources :boutique_searches
   get 'password_resets/new'
 
@@ -27,6 +31,9 @@ Rails.application.routes.draw do
   resources :boutiques do
     collection { post :import}
   end
+
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

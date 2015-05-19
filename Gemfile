@@ -19,6 +19,7 @@ gem 'jbuilder',                '2.2.3'
 gem 'mail_form'
 gem 'sdoc',                    '0.4.0', group: :doc
 gem 'alphabetical_paginate'
+gem 'simple_form'
 
 
 group :development, :test do
