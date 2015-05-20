@@ -1,7 +1,19 @@
 <%= form_for(@boutique) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.text_area :name, placeholder: "Provide a description of your boutique here" %>
-  </div>
-  <%= f.submit "Save Boutique", class: "btn btn-primary" %>
+<%= render 'shared/error_messages', object: f.object %>
+<div class="field">
+  <%= f.text_area :name, placeholder: "Boutique Name" %>
+  <%= f.text_area :description, placeholder: "Provide a description of your boutique here" %>
+  <%= f.text_area :twitter, placeholder: "Twitter Handle" %>
+  <%= f.text_area :facebook, placeholder: "Facebook Page" %>
+  <%= f.text_area :instagram, placeholder: "Instagram Page" %>
+  <%= f.text_area :website, placeholder: "Website" %>
+  <%= f.text_area :city, placeholder: "City" %>
+  <%= f.text_area :state, placeholder: "State" %>
+
+
+  <%= f.select :category, [ "Fashion", "Jewelry", "Makeup", "Spa Services"]%>
+
+</div>
+<%= f.submit "Save Boutique", class: "btn btn-primary" %>
 <% end %>
+

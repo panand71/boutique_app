@@ -11,6 +11,17 @@ body {
     font-family: 'Open Sans',Arial,Helvetica,Sans-Serif;
 }
 
+.jumbotron {
+    position: relative;
+    background: #000 url("truck_picture1.jpg") center center;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+.logo-font {
+  font-family: 'Pacifico', cursive;
+  color: #FFFFFF;
+}
 a:link, a:visited {
   color:#000000;
 }

@@ -11,13 +11,19 @@ body {
 .tagline {
   font-family: 'Pacifico', cursive;
   font-size: 63px;
+  color: #FFFFFF;
 }
 
+.header-background {
+  background-color: #FF80AB;
+
+}
 /* home page jumbotron */
 .custom_jumbotron {
   width: 100%;
   background-color: #FF80AB;
   margin-top: 100px;
+  height: 400px;
 }
 
 section {
@@ -83,16 +89,17 @@ p {
 }
 
 
-.navbar-inverse .navbar-nav .navbar-toggle  {
-  color: #FFFFFF;
+.navbar-inverse .navbar-nav .navbar-toggle .navbar-text .navbar-nav > li > a {
+    color: #FFFFFF;
     background-color: #000033;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
 
 }
 
+
 .navbar-inverse .navbar-nav .navbar-toggle > li > a {
-  color: #FFFFFF;
+    color: #FFFFFF;
     background-color: #000033;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
