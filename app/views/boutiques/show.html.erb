@@ -14,26 +14,19 @@
       
       <div class="row">
         <div class="col-sm-3">
-          <img src= alt="<%=@boutique.name%> Photo" class="thumbnail img-responsive" alt="" />
+          <img src= ""alt="<%=@boutique.name%> Photo" class="thumbnail img-responsive" alt="" />
           
           <div class="mb30"></div>
-          
-          <h4 class="left_subtitle">About</h4>
-          <h4 class="left_subtitle">Category:</h4>
-          
-          <h4 class="left_subtitle">Connect</h4>
           <ul class="profile-social-list">
-            <li><i class="fa fa-twitter"></i>
-              <% link_to (@boutique) do %>
-              <strong><=@boutique.twitter %></strong> --<span>Twitter</span>
-              <%end%>
-            <li><i class="fa fa-facebook"></i><a href="<%= @boutique.facebook %> Facebook"></a></li>
-            <li><i class="fa fa-youtube"></i><%= @boutique.twitter %></li>
-            <li><i class="fa fa-linkedin"></i><%= @boutique.twitter %></li> 
-            <li><i class="fa fa-pinterest"></i><%= @boutique.twitter %></li>
-            <li><i class="fa fa-instagram"></i><a href="t<%@boutique.instagram %>"></a></li>
+            <li><i class="fa fa-code"></i><a href="<%= @boutique.website %>">Website</a></li>
+            <li><i class="fa fa-facebook"></i><a href="<%= @boutique.facebook %>">Facebook Page</a></li>
+            <li><i class="fa fa-instagram"></i><a href="<%@boutique.instagram %>">Instagram Page</a></li>
+            <li><i class="fa fa-twitter"></i><a href="<%= @boutique.twitter %>">Twitter Profile</li>  
+            <li><i class="fa fa-pinterest"></i><a href="<%= @boutique.pinterest %>">Pinterest Page</li>
+            <li><i class="fa fa-youtube"></i><a href="<%= @boutique.you_tube %>">YouTube Channel</li>
+
           </ul>
-          
+
           <div class="mb30"></div>
           
           <h5 class="subtitle">Location</h5>
@@ -48,21 +41,23 @@
           <div class="profile-header">
             <h2 class="profile-name">Profile</h2>
             <div class="profile-location"><i class="fa fa-map-marker"></i><%= @boutique.city%>, <%= @boutique.state%></div>
-            <div class="profile-position"><i class="fa fa-briefcase"></i> Software Engineer at <%= @boutique.name %></div>
+            <div class="profile-position"><i class="fa fa-truck"></i> <%= @boutique.name %></div>
             
             <div class="mb20"></div>
             
             <button class="btn btn-success mr5"><i class="fa fa-user"></i> Follow</button>
             <button class="btn btn-info"><i class="fa fa-envelope-o"></i> Message</button>
-            <button class="btn btn-warning"><i class="fa fa-envelope-o"></i> Claim This Profile</button>
+            <button class="btn btn-warning"><i class="fa fa-envelope-o"></i><a href="mailto:panand71@gmail.com"> Claim This Profile</button></a>
+
+
           </div><!-- profile-header -->
           
           <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-justified nav-profile">
-          <li class="active"><a href="#activities" data-toggle="tab"><strong>Description</strong></a></li>
-          <li><a href="#following" data-toggle="tab"><strong>Photos</strong></a></li>
-          <li><a href="#followers" data-toggle="tab"><strong>Followers</strong></a></li>
-          <li><a href="#events" data-toggle="tab"><strong>Upcoming Events</strong></a></li>
+          <li class="active"><a href="#activities" data-toggle="tab">Description</a></li>
+          <li><a href="#following" data-toggle="tab">Photos</a></li>
+          <li><a href="#followers" data-toggle="tab">Followers</a></li>
+          <li><a href="#events" data-toggle="tab">Events</a></li>
         </ul>
         
         <!-- Tab panes -->

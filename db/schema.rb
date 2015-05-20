@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150519194455) do
+ActiveRecord::Schema.define(version: 20150520224243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,12 +44,24 @@ ActiveRecord::Schema.define(version: 20150519194455) do
     t.integer  "owner_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "you_tube"
+    t.string   "pinterest"
   end
 
   add_index "boutiques", ["owner_id", "created_at"], name: "index_boutiques_on_owner_id_and_created_at", using: :btree
   add_index "boutiques", ["owner_id"], name: "index_boutiques_on_owner_id", using: :btree
 
   create_table "contacts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "newsletter_subscribers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "newsletters", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

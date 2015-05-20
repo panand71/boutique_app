@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'newsletter_subscribers/new'
+
+  get 'newsletter_subscribers/create'
+
   get 'contacts/new'
 
   get 'contacts/create'
@@ -35,6 +39,8 @@ Rails.application.routes.draw do
   match '/contacts',     to: 'contacts#new',             via: 'get'
   resources "contacts", only: [:new, :create]
 
+  match '/newsletter_subscribers',     to: 'newsletter_subscribers#new',             via: 'get'
+  resources "newsletter_subscribers", only: [:new, :create]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

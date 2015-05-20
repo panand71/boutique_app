@@ -1,6 +1,18 @@
 <% provide(:title, 'Contact') %>
-<h2>Contact Us</h2>
-<p>
-  Contact Fashion Truck US
-  <a href="#">contact page</a>.
-</p>
+<h2>Sign up to receive the latest Fashion Truck US news!</h2>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-primary panel-alt widget-newsletter">
+          <div class="panel-heading">
+              <h3 class="panel-title">Subscribe To Newsletter</h3>
+            </div>
+            <div class="panel-body">
+              <small>Sign up below to receive all the latest updates &amp; news from us.</small>
+              <%= form_for(@owner) do |f| %>
+                <%= f.text_area :name, class: "form-control mt10 mb10", placeholder: "Name" %>
+                <%= f.text_area :email, class: "form-control mt10 mb10", placeholder: "Email" %>
+                <%= f.submit "Subscribe", class: "btn btn-default btn-block" %>
+              <% end %>
+            </div><!-- panel-body -->
+          </div><!-- panel -->

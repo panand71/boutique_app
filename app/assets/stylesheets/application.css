@@ -94,14 +94,8 @@
   
 }
 
-.left_subtitles {
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #333;
-  font-family: 'LatoBold';
-  margin-bottom: 15px;
-  margin-top: 0;
-}
+
+
 
 body {
     background: #FFFFFF;
@@ -129,6 +123,14 @@ h1,h2,h3,h4,h5 {
 strong {
     font-family: 'LatoBold';
     font-weight: normal;
+}
+
+.left_subtitles {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 15px;
+  margin-top: 0;
 }
 
 /* preloader */
@@ -795,13 +797,13 @@ strong {
     padding: 15px;
     border-bottom: 1px solid #d3d7db;
     border-top: 1px solid #eee;
-    background: #f7f7f7;
+    background: #000033;
     position: relative;
 }
 
 .pageheader h2 {
     font-size: 28px;
-    color: #1D2939;
+    color: #FFFFFF;
     letter-spacing: -0.5px;
     margin: 0;
 }
@@ -883,10 +885,11 @@ strong {
 
 .pageheader .breadcrumb li {
     font-size: 12px;
+    color: #FF80AB;
 }
 
 .pageheader .breadcrumb li.active {
-    color: #333;
+    color: #FF80AB;
 }
 
 .contentpanel {
@@ -2360,6 +2363,8 @@ div.error label.error:before {
 .profile-social-list li .fa {
     margin-right: 10px;
     width: 16px;
+    font-size: 24px;
+      color: #000033;
 }
 
 .activity-list {
