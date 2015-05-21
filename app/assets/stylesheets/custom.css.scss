@@ -32,6 +32,17 @@ body {
   height: 400px;
 }
 
+.home-page-header {
+  padding-top: 100px;
+  text-align: center;
+  font-size: 32px;
+  color: #000033;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #000033;
+}
+
 section {
   overflow: auto;
 }
