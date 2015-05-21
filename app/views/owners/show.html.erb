@@ -9,12 +9,10 @@
     </section>
   </aside>
     <div class="col-md-8">
-    <% if @owner.boutiques.any? %>
-      <h3>Boutiques (<%= @owner.boutiques.name %>)</h3>
-      <ol class="boutiques">
-        <%= render @boutiques %>
-      </ol>
-      # <%= will_paginate @boutiques %>
-    <% end %>
+      <h3><%= @owner.boutiques.name %></h3>
+
+
+      <%= will_paginate @boutiques %>
+
   </div>
 </div>
