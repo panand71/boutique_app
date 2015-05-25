@@ -17,31 +17,33 @@ body {
 
 .tagline-small {
   padding-top: 15px;
-  font-family: 'Pacifico', cursive;
   font-size: 40px;
-  color: #000033;
+  font-family: 'Roboto', sans-serif;
+  color: #FF80AB;
 }
+
 .header-background {
-  background-color: #FF80AB;
+  background-color: #000033;
 
 }
 /* home page jumbotron */
 .custom_jumbotron {
   width: 100%;
   background-color: #FF80AB;
-  margin-top: 100px;
+  margin-top: 50px;
   height: 400px;
 }
 
 .home-page-header {
   padding-top: 20px;
   text-align: center;
+  font-family: 'Roboto', sans-serif;  
   font-size: 32px;
   color: #000033;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #000033;
+  color: #FF80AB;
 }
 
 section {
